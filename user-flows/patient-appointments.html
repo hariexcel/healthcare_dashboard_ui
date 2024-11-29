@@ -14,7 +14,48 @@
             <h1 class="nav-title">Appointments</h1>
         </div>
     </nav>
-    <main class="container mx-auto p-6">
+    <div class="flex">
+        <!-- Pinnable Left Sidebar -->
+        <aside class="w-64 bg-white shadow-lg h-screen sticky top-0">
+            <div class="p-4">
+                <h1 class="text-xl font-bold mb-6">Healthcare Dashboard</h1>
+                
+                <!-- Patient Flows Section -->
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-gray-600 mb-2">Patient Flows</h2>
+                    <div class="space-y-2">
+                        <a href="patient-flow.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Main Dashboard</a>
+                        <a href="patient-appointments.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Appointments</a>
+                        <a href="patient-medical-records.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Medical Records</a>
+                    </div>
+                </div>
+
+                <!-- Appointment Booking Section -->
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-gray-600 mb-2">Appointment Booking</h2>
+                    <div class="space-y-2">
+                        <a href="new-appointment.html" class="block px-4 py-2 hover:bg-gray-100 rounded">New Appointment</a>
+                        <a href="select-doctor.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Select Doctor</a>
+                        <a href="choose-date.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Select Date</a>
+                        <a href="confirm-appointment.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Confirm</a>
+                    </div>
+                </div>
+
+                <!-- Additional Features Section -->
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-gray-600 mb-2">Additional Features</h2>
+                    <div class="space-y-2">
+                        <a href="patient-messages.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Messages</a>
+                        <a href="patient-prescriptions.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Prescriptions</a>
+                        <a href="upload-medical-record.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Upload Records</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <main class="p-6">
         <div class="bg-white rounded-lg shadow p-6">
             <div class="space-y-6">
                 <h2 class="text-xl font-semibold mb-4">My Appointments</h2>
