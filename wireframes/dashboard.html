@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dashboard Wireframe</title>
-   <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard Wireframe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
-   <nav class="bg-white shadow h-16"></nav>
-   <div class="container mx-auto p-6">
-       <div class="grid grid-cols-3 gap-6">
-           <div class="h-40 bg-gray-200 rounded-lg"></div>
-           <div class="h-40 bg-gray-200 rounded-lg"></div>
-           <div class="h-40 bg-gray-200 rounded-lg"></div>
-       </div>
-       <div class="grid grid-cols-2 gap-6 mt-6">
-           <div class="h-64 bg-gray-200 rounded-lg"></div>
-           <div class="h-64 bg-gray-200 rounded-lg"></div>
-       </div>
-   </div>
+    <nav class="bg-white shadow h-16 flex items-center px-6">
+        <h1 class="text-xl font-bold">Healthcare Dashboard Wireframes</h1>
+    </nav>
+    <div class="container mx-auto p-6">
+        <!-- Patient Flow Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Patient Flows</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <a href="../user-flows/patient-flow.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Main Patient Dashboard</h3>
+                    <p class="text-gray-600">Overview of patient features and navigation</p>
+                </a>
+                <a href="../user-flows/patient-appointments.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Appointments</h3>
+                    <p class="text-gray-600">Schedule and manage appointments</p>
+                </a>
+                <a href="../user-flows/patient-medical-records.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Medical Records</h3>
+                    <p class="text-gray-600">View and manage medical history</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Appointment Flow Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Appointment Booking Flow</h2>
+            <div class="grid grid-cols-4 gap-6">
+                <a href="../user-flows/new-appointment.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">New Appointment</h3>
+                    <p class="text-gray-600">Start booking process</p>
+                </a>
+                <a href="../user-flows/select-doctor.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Select Doctor</h3>
+                    <p class="text-gray-600">Choose healthcare provider</p>
+                </a>
+                <a href="../user-flows/choose-date.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Select Date</h3>
+                    <p class="text-gray-600">Pick appointment date</p>
+                </a>
+                <a href="../user-flows/confirm-appointment.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Confirm</h3>
+                    <p class="text-gray-600">Review and confirm booking</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Additional Features Section -->
+        <div>
+            <h2 class="text-xl font-semibold mb-4">Additional Features</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <a href="../user-flows/patient-messages.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Messages</h3>
+                    <p class="text-gray-600">Communication with healthcare providers</p>
+                </a>
+                <a href="../user-flows/patient-prescriptions.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Prescriptions</h3>
+                    <p class="text-gray-600">View and manage prescriptions</p>
+                </a>
+                <a href="../user-flows/upload-medical-record.html" class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Upload Records</h3>
+                    <p class="text-gray-600">Upload external medical documents</p>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
