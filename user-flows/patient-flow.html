@@ -14,7 +14,96 @@
         </div>
     </nav>
     <main class="container mx-auto p-6">
+        <!-- Dashboard Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <!-- Health Metrics -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Health Overview</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Blood Pressure</span>
+                        <span class="font-semibold">120/80</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Heart Rate</span>
+                        <span class="font-semibold">72 bpm</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Weight</span>
+                        <span class="font-semibold">70 kg</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">BMI</span>
+                        <span class="font-semibold">22.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Next Appointment</h2>
+                <div class="space-y-2">
+                    <p class="font-medium">Dr. Sarah Johnson</p>
+                    <p class="text-gray-600">Cardiology Check-up</p>
+                    <p class="text-gray-600">December 5, 2024 - 10:00 AM</p>
+                    <a href="patient-appointments.html" class="text-blue-600 hover:underline text-sm">View all appointments</a>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+                <div class="space-y-3">
+                    <div class="text-sm">
+                        <p class="font-medium">New Prescription Added</p>
+                        <p class="text-gray-600">2 hours ago</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-medium">Lab Results Available</p>
+                        <p class="text-gray-600">Yesterday</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-medium">Appointment Completed</p>
+                        <p class="text-gray-600">3 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Quick Actions</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="new-appointment.html" class="flex flex-col items-center p-4 border rounded-lg hover:bg-blue-50">
+                    <svg class="w-6 h-6 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    <span>Book Appointment</span>
+                </a>
+                <a href="patient-messages.html" class="flex flex-col items-center p-4 border rounded-lg hover:bg-blue-50">
+                    <svg class="w-6 h-6 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                    </svg>
+                    <span>Message Doctor</span>
+                </a>
+                <a href="patient-prescriptions.html" class="flex flex-col items-center p-4 border rounded-lg hover:bg-blue-50">
+                    <svg class="w-6 h-6 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <span>View Prescriptions</span>
+                </a>
+                <a href="upload-medical-record.html" class="flex flex-col items-center p-4 border rounded-lg hover:bg-blue-50">
+                    <svg class="w-6 h-6 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                    </svg>
+                    <span>Upload Records</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Flow -->
         <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Navigation Flow</h2>
             <div class="flow-diagram space-y-8">
                 <!-- Login Flow -->
                 <div class="flow-step">
