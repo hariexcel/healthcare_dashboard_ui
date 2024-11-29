@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records - Healthcare Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center">
+            <a href="patient-flow.html" class="text-white mr-4">← Back</a>
+            <h1 class="text-2xl font-bold">Medical Records</h1>
+        </div>
+    </nav>
+    <main class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="space-y-6">
+                <h2 class="text-xl font-semibold mb-4">My Medical Records</h2>
+                
+                <!-- Records List -->
+                <div class="space-y-4">
+                    <div class="border p-4 rounded-lg">
+                        <h3 class="font-semibold">Annual Check-up</h3>
+                        <p class="text-gray-600">Date: November 15, 2024</p>
+                        <p class="text-gray-600">Doctor: Dr. Michael Smith</p>
+                        <button class="mt-2 text-blue-600">View Report</button>
+                    </div>
+                    
+                    <div class="border p-4 rounded-lg">
+                        <h3 class="font-semibold">Blood Test Results</h3>
+                        <p class="text-gray-600">Date: October 20, 2024</p>
+                        <p class="text-gray-600">Lab: Central Medical Lab</p>
+                        <button class="mt-2 text-blue-600">View Report</button>
+                    </div>
+                </div>
+
+                <!-- Download Records -->
+                <div class="mt-6">
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+                        Download All Records
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

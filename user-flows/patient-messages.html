@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Healthcare Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center">
+            <a href="patient-flow.html" class="text-white mr-4">← Back</a>
+            <h1 class="text-2xl font-bold">Messages</h1>
+        </div>
+    </nav>
+    <main class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="space-y-6">
+                <h2 class="text-xl font-semibold mb-4">My Messages</h2>
+                
+                <!-- Message List -->
+                <div class="space-y-4">
+                    <div class="border p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-semibold">Dr. Sarah Johnson</p>
+                                <p class="text-gray-600">Follow-up appointment reminder</p>
+                                <p class="text-sm text-gray-500">2 hours ago</p>
+                            </div>
+                            <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="border p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-semibold">Lab Results</p>
+                                <p class="text-gray-600">Your test results are ready</p>
+                                <p class="text-sm text-gray-500">Yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Message Button -->
+                <div class="mt-6">
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+                        New Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
