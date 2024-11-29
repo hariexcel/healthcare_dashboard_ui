@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History Report - Healthcare Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center">
+            <a href="../wireframes/dashboard.html" class="text-white mr-4">← Back</a>
+            <h1 class="text-2xl font-bold">Medical History Report</h1>
+        </div>
+    </nav>
+    <main class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-semibold">Complete Medical History</h2>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Download PDF
+                    </button>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <h3 class="font-semibold mb-2">Patient Information</h3>
+                        <p class="text-gray-600">Name: John Doe</p>
+                        <p class="text-gray-600">ID: PAT-2024-001</p>
+                        <p class="text-gray-600">Date Generated: November 30, 2024</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="font-semibold">Medical Conditions</h3>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Hypertension (Diagnosed: 2023)</li>
+                                <li>Type 2 Diabetes (Diagnosed: 2022)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="font-semibold">Surgeries & Procedures</h3>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Appendectomy (2020)</li>
+                                <li>Knee Arthroscopy (2019)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="font-semibold">Allergies</h3>
+                        <div class="bg-gray-50 p-4 rounded">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Penicillin - Severe reaction</li>
+                                <li>Peanuts - Mild reaction</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
