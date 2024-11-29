@@ -6,38 +6,48 @@
     <title>Healthcare Dashboard Wireframe</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-white shadow h-16 flex items-center justify-between px-6">
-        <h1 class="text-xl font-bold">Healthcare Dashboard Wireframes</h1>
-        <div class="flex items-center space-x-4">
-            <div class="relative group">
-                <button class="hover:text-blue-600">Patient Flows ▾</button>
-                <div class="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg hidden group-hover:block">
-                    <a href="../user-flows/patient-flow.html" class="block px-4 py-2 hover:bg-gray-100">Main Patient Dashboard</a>
-                    <a href="../user-flows/patient-appointments.html" class="block px-4 py-2 hover:bg-gray-100">Appointments</a>
-                    <a href="../user-flows/patient-medical-records.html" class="block px-4 py-2 hover:bg-gray-100">Medical Records</a>
+<body class="bg-gray-100 flex">
+    <!-- Pinnable Left Sidebar -->
+    <aside class="w-64 bg-white shadow-lg h-screen sticky top-0">
+        <div class="p-4">
+            <h1 class="text-xl font-bold mb-6">Healthcare Dashboard</h1>
+            
+            <!-- Patient Flows Section -->
+            <div class="mb-6">
+                <h2 class="text-sm font-semibold text-gray-600 mb-2">Patient Flows</h2>
+                <div class="space-y-2">
+                    <a href="../user-flows/patient-flow.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Main Dashboard</a>
+                    <a href="../user-flows/patient-appointments.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Appointments</a>
+                    <a href="../user-flows/patient-medical-records.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Medical Records</a>
                 </div>
             </div>
-            <div class="relative group">
-                <button class="hover:text-blue-600">Appointment Booking ▾</button>
-                <div class="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg hidden group-hover:block">
-                    <a href="../user-flows/new-appointment.html" class="block px-4 py-2 hover:bg-gray-100">New Appointment</a>
-                    <a href="../user-flows/select-doctor.html" class="block px-4 py-2 hover:bg-gray-100">Select Doctor</a>
-                    <a href="../user-flows/choose-date.html" class="block px-4 py-2 hover:bg-gray-100">Select Date</a>
-                    <a href="../user-flows/confirm-appointment.html" class="block px-4 py-2 hover:bg-gray-100">Confirm</a>
+
+            <!-- Appointment Booking Section -->
+            <div class="mb-6">
+                <h2 class="text-sm font-semibold text-gray-600 mb-2">Appointment Booking</h2>
+                <div class="space-y-2">
+                    <a href="../user-flows/new-appointment.html" class="block px-4 py-2 hover:bg-gray-100 rounded">New Appointment</a>
+                    <a href="../user-flows/select-doctor.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Select Doctor</a>
+                    <a href="../user-flows/choose-date.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Select Date</a>
+                    <a href="../user-flows/confirm-appointment.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Confirm</a>
                 </div>
             </div>
-            <div class="relative group">
-                <button class="hover:text-blue-600">Additional Features ▾</button>
-                <div class="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg hidden group-hover:block">
-                    <a href="../user-flows/patient-messages.html" class="block px-4 py-2 hover:bg-gray-100">Messages</a>
-                    <a href="../user-flows/patient-prescriptions.html" class="block px-4 py-2 hover:bg-gray-100">Prescriptions</a>
-                    <a href="../user-flows/upload-medical-record.html" class="block px-4 py-2 hover:bg-gray-100">Upload Records</a>
+
+            <!-- Additional Features Section -->
+            <div class="mb-6">
+                <h2 class="text-sm font-semibold text-gray-600 mb-2">Additional Features</h2>
+                <div class="space-y-2">
+                    <a href="../user-flows/patient-messages.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Messages</a>
+                    <a href="../user-flows/patient-prescriptions.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Prescriptions</a>
+                    <a href="../user-flows/upload-medical-record.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Upload Records</a>
                 </div>
             </div>
         </div>
-    </nav>
-    <div class="container mx-auto p-6">
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1">
+    <div class="p-6">
         <!-- Patient Details Section -->
         <div class="mb-8">
             <h2 class="text-xl font-semibold mb-4">Patient Details &amp; Reports</h2>
