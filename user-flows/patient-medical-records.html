@@ -18,28 +18,38 @@
             <div class="space-y-6">
                 <h2 class="text-xl font-semibold mb-4">My Medical Records</h2>
                 
+                <!-- Add New Record Button -->
+                <div class="mb-4">
+                    <a href="new-medical-record.html" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+                        Add New Record
+                    </a>
+                </div>
+
                 <!-- Records List -->
                 <div class="space-y-4">
                     <div class="border p-4 rounded-lg">
                         <h3 class="font-semibold">Annual Check-up</h3>
                         <p class="text-gray-600">Date: November 15, 2024</p>
                         <p class="text-gray-600">Doctor: Dr. Michael Smith</p>
-                        <button class="mt-2 text-blue-600">View Report</button>
+                        <a href="view-medical-record.html?id=1" class="mt-2 text-blue-600 hover:underline">View Report</a>
                     </div>
                     
                     <div class="border p-4 rounded-lg">
                         <h3 class="font-semibold">Blood Test Results</h3>
                         <p class="text-gray-600">Date: October 20, 2024</p>
                         <p class="text-gray-600">Lab: Central Medical Lab</p>
-                        <button class="mt-2 text-blue-600">View Report</button>
+                        <a href="view-medical-record.html?id=2" class="mt-2 text-blue-600 hover:underline">View Report</a>
                     </div>
                 </div>
 
                 <!-- Download Records -->
-                <div class="mt-6">
-                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+                <div class="mt-6 flex gap-4">
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
                         Download All Records
                     </button>
+                    <a href="upload-medical-record.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700">
+                        Upload External Records
+                    </a>
                 </div>
             </div>
         </div>
