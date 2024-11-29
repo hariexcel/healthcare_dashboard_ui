@@ -6,6 +6,9 @@
     <title>Healthcare Dashboard Wireframe</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="bg-gray-100 flex">
@@ -49,205 +52,199 @@
 
     <!-- Main Content -->
     <div class="flex-1">
-    <div class="p-6">
-        <!-- Patient Details Section -->
-        <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-4">Patient Details &amp; Reports</h2>
-            <div class="grid grid-cols-2 gap-6">
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-                    <h3 class="font-semibold mb-2">Patient Information</h3>
+        <div class="p-6">
+            <!-- Analytics Section -->
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Health Analytics</h2>
+                <div id="bp-chart" class="mb-6"></div>
+            </div>
+
+            <!-- Patient Details Section -->
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Patient Details & Reports</h2>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                        <h3 class="font-semibold mb-2">Patient Information</h3>
+                        <div class="space-y-2">
+                            <p class="text-gray-600">Name: John Doe</p>
+                            <p class="text-gray-600">ID: PAT-2024-001</p>
+                            <p class="text-gray-600">Age: 35</p>
+                            <p class="text-gray-600">Contact: (555) 123-4567</p>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">Edit Details</a>
+                    </div>
+                    <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                        <h3 class="font-semibold mb-2">Generate Reports</h3>
+                        <div class="space-y-3">
+                            <a href="../reports/medical-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                                Medical History Report
+                            </a>
+                            <a href="../reports/prescription-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                                Prescription History
+                            </a>
+                            <a href="../reports/lab-results.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                                Lab Results Summary
+                            </a>
+                            <a href="../reports/appointment-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                                Appointment History
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Overview Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <!-- Health Metrics -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">Health Overview</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Blood Pressure</span>
+                            <span class="font-semibold">120/80</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Heart Rate</span>
+                            <span class="font-semibold">72 bpm</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Weight</span>
+                            <span class="font-semibold">70 kg</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">BMI</span>
+                            <span class="font-semibold">22.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Appointments -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">Next Appointment</h2>
                     <div class="space-y-2">
-                        <p class="text-gray-600">Name: John Doe</p>
-                        <p class="text-gray-600">ID: PAT-2024-001</p>
-                        <p class="text-gray-600">Age: 35</p>
-                        <p class="text-gray-600">Contact: (555) 123-4567</p>
+                        <p class="font-medium">Dr. Sarah Johnson</p>
+                        <p class="text-gray-600">Cardiology Check-up</p>
+                        <p class="text-gray-600">December 5, 2024 - 10:00 AM</p>
+                        <a href="../user-flows/patient-appointments.html" class="text-blue-600 hover:underline text-sm">View all appointments</a>
                     </div>
-                    <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">Edit Details</a>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
-                    <h3 class="font-semibold mb-2">Generate Reports</h3>
+
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
                     <div class="space-y-3">
-                        <a href="../reports/medical-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
-                            Medical History Report
-                        </a>
-                        <a href="../reports/prescription-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
-                            Prescription History
-                        </a>
-                        <a href="../reports/lab-results.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
-                            Lab Results Summary
-                        </a>
-                        <a href="../reports/appointment-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
-                            Appointment History
-                        </a>
+                        <div class="text-sm">
+                            <p class="font-medium">New Prescription Added</p>
+                            <p class="text-gray-600">2 hours ago</p>
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-medium">Lab Results Available</p>
+                            <p class="text-gray-600">Yesterday</p>
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-medium">Appointment Completed</p>
+                            <p class="text-gray-600">3 days ago</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Health Overview Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <!-- Health Metrics -->
-            <div class="bg-white rounded-lg shadow p-6">
-                <h2 class="text-xl font-semibold mb-4">Health Overview</h2>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-600">Blood Pressure</span>
-                        <span class="font-semibold">120/80</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-600">Heart Rate</span>
-                        <span class="font-semibold">72 bpm</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-600">Weight</span>
-                        <span class="font-semibold">70 kg</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-600">BMI</span>
-                        <span class="font-semibold">22.5</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Upcoming Appointments -->
-            <div class="bg-white rounded-lg shadow p-6">
-                <h2 class="text-xl font-semibold mb-4">Next Appointment</h2>
-                <div class="space-y-2">
-                    <p class="font-medium">Dr. Sarah Johnson</p>
-                    <p class="text-gray-600">Cardiology Check-up</p>
-                    <p class="text-gray-600">December 5, 2024 - 10:00 AM</p>
-                    <a href="../user-flows/patient-appointments.html" class="text-blue-600 hover:underline text-sm">View all appointments</a>
-                </div>
-            </div>
-
-            <!-- Recent Activity -->
-            <div class="bg-white rounded-lg shadow p-6">
-                <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
-                <div class="space-y-3">
-                    <div class="text-sm">
-                        <p class="font-medium">New Prescription Added</p>
-                        <p class="text-gray-600">2 hours ago</p>
-                    </div>
-                    <div class="text-sm">
-                        <p class="font-medium">Lab Results Available</p>
-                        <p class="text-gray-600">Yesterday</p>
-                    </div>
-                    <div class="text-sm">
-                        <p class="font-medium">Appointment Completed</p>
-                        <p class="text-gray-600">3 days ago</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+
     <script>
-        // Blood Pressure Chart
-        const bpCtx = document.getElementById('bpChart').getContext('2d');
-        new Chart(bpCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-                datasets: [{
-                    label: 'Systolic',
-                    data: [120, 118, 122, 119, 116, 120],
-                    borderColor: 'rgb(59, 130, 246)',
-                    tension: 0.1
-                }, {
-                    label: 'Diastolic',
-                    data: [80, 78, 82, 79, 76, 80],
-                    borderColor: 'rgb(147, 197, 253)',
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Blood Pressure Trends'
-                    }
-                }
-            }
-        });
+        // Blood Pressure Chart Data
+        const bpData = [
+            { date: '2024-01-01', systolic: 120, diastolic: 80 },
+            { date: '2024-01-15', systolic: 118, diastolic: 78 },
+            { date: '2024-02-01', systolic: 125, diastolic: 82 },
+            { date: '2024-02-15', systolic: 115, diastolic: 75 },
+            { date: '2024-03-01', systolic: 122, diastolic: 79 },
+            { date: '2024-03-15', systolic: 119, diastolic: 77 },
+            { date: '2024-04-01', systolic: 121, diastolic: 81 }
+        ];
 
-        // Blood Sugar Chart
-        const sugarCtx = document.getElementById('sugarChart').getContext('2d');
-        new Chart(sugarCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-                datasets: [{
-                    label: 'Blood Sugar (mg/dL)',
-                    data: [95, 98, 92, 96, 94, 98],
-                    borderColor: 'rgb(34, 197, 94)',
-                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
-                    fill: true,
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Blood Sugar Levels'
-                    }
-                }
-            }
-        });
+        // Initialize React component
+        const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } = Recharts;
 
-        // Weight Tracking Chart
-        const weightCtx = document.getElementById('weightChart').getContext('2d');
-        new Chart(weightCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-                datasets: [{
-                    label: 'Weight (kg)',
-                    data: [72, 71, 70.5, 70, 70.2, 70],
-                    borderColor: 'rgb(236, 72, 153)',
-                    backgroundColor: 'rgba(236, 72, 153, 0.1)',
-                    fill: true,
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Weight Trends'
-                    }
-                }
-            }
-        });
+        const BPChart = () => {
+            return React.createElement(
+                'div',
+                { className: 'w-full bg-white p-4 rounded-lg shadow-sm' },
+                [
+                    React.createElement('h2', { className: 'text-lg font-semibold mb-4' }, 'Blood Pressure Trends'),
+                    React.createElement(
+                        'div',
+                        { className: 'h-64' },
+                        React.createElement(
+                            ResponsiveContainer,
+                            { width: '100%', height: '100%' },
+                            React.createElement(
+                                LineChart,
+                                {
+                                    data: bpData,
+                                    margin: { top: 5, right: 30, left: 20, bottom: 5 }
+                                },
+                                [
+                                    React.createElement(CartesianGrid, { strokeDasharray: '3 3' }),
+                                    React.createElement(XAxis, {
+                                        dataKey: 'date',
+                                        tickFormatter: (date) => new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+                                    }),
+                                    React.createElement(YAxis, { domain: [60, 140] }),
+                                    React.createElement(Tooltip, {
+                                        formatter: (value, name) => [`${value} mm/Hg`, name.charAt(0).toUpperCase() + name.slice(1)],
+                                        labelFormatter: (date) => new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+                                    }),
+                                    React.createElement(Legend),
+                                    React.createElement(Line, {
+                                        type: 'monotone',
+                                        dataKey: 'systolic',
+                                        stroke: '#EF4444',
+                                        strokeWidth: 2,
+                                        dot: { fill: '#EF4444' }
+                                    }),
+                                    React.createElement(Line, {
+                                        type: 'monotone',
+                                        dataKey: 'diastolic',
+                                        stroke: '#3B82F6',
+                                        strokeWidth: 2,
+                                        dot: { fill: '#3B82F6' }
+                                    })
+                                ]
+                            )
+                        )
+                    ),
+                    React.createElement(
+                        'div',
+                        { className: 'mt-4 grid grid-cols-2 gap-4' },
+                        [
+                            React.createElement(
+                                'div',
+                                { className: 'p-3 bg-red-50 rounded-lg' },
+                                [
+                                    React.createElement('p', { className: 'text-sm text-gray-600' }, 'Latest Systolic'),
+                                    React.createElement('p', { className: 'text-xl font-semibold text-red-600' }, `${bpData[bpData.length - 1].systolic} mm/Hg`)
+                                ]
+                            ),
+                            React.createElement(
+                                'div',
+                                { className: 'p-3 bg-blue-50 rounded-lg' },
+                                [
+                                    React.createElement('p', { className: 'text-sm text-gray-600' }, 'Latest Diastolic'),
+                                    React.createElement('p', { className: 'text-xl font-semibold text-blue-600' }, `${bpData[bpData.length - 1].diastolic} mm/Hg`)
+                                ]
+                            )
+                        ]
+                    )
+                ]
+            );
+        };
 
-        // Heart Rate Monitoring Chart
-        const heartRateCtx = document.getElementById('heartRateChart').getContext('2d');
-        new Chart(heartRateCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-                datasets: [{
-                    label: 'Heart Rate (bpm)',
-                    data: [75, 72, 74, 71, 73, 72],
-                    borderColor: 'rgb(239, 68, 68)',
-                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                    fill: true,
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Heart Rate Monitoring'
-                    }
-                }
-            }
-        });
+        // Render the BP Chart
+        ReactDOM.render(
+            React.createElement(BPChart),
+            document.getElementById('bp-chart')
+        );
     </script>
 </body>
 </html>
