@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient User Flow - Healthcare Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center">
+            <a href="../index.html" class="text-white mr-4">← Back</a>
+            <h1 class="text-2xl font-bold">Patient User Flow</h1>
+        </div>
+    </nav>
+    <main class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="flow-diagram space-y-8">
+                <!-- Login Flow -->
+                <div class="flow-step">
+                    <h3 class="text-lg font-semibold mb-3">1. Authentication</h3>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div class="p-4 border rounded bg-blue-50">Login</div>
+                        <div class="flex items-center justify-center">→</div>
+                        <div class="p-4 border rounded bg-blue-50">2FA Verification</div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Navigation -->
+                <div class="flow-step">
+                    <h3 class="text-lg font-semibold mb-3">2. Main Dashboard</h3>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="p-4 border rounded bg-green-50">Appointments</div>
+                        <div class="p-4 border rounded bg-green-50">Medical Records</div>
+                        <div class="p-4 border rounded bg-green-50">Prescriptions</div>
+                        <div class="p-4 border rounded bg-green-50">Messages</div>
+                    </div>
+                </div>
+
+                <!-- Appointment Booking -->
+                <div class="flow-step">
+                    <h3 class="text-lg font-semibold mb-3">3. Appointment Scheduling</h3>
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="p-4 border rounded bg-yellow-50">Select Doctor</div>
+                        <div class="p-4 border rounded bg-yellow-50">Choose Date</div>
+                        <div class="p-4 border rounded bg-yellow-50">Select Time</div>
+                        <div class="p-4 border rounded bg-yellow-50">Confirm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
