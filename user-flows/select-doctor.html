@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Doctor - Healthcare Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center">
+            <a href="patient-flow.html" class="text-white mr-4">← Back</a>
+            <h1 class="text-2xl font-bold">Select Doctor</h1>
+        </div>
+    </nav>
+    <main class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow p-6">
+            <div class="space-y-6">
+                <h2 class="text-xl font-semibold mb-4">Available Doctors</h2>
+                
+                <!-- Doctor List -->
+                <div class="space-y-4">
+                    <div class="border p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <div class="flex items-start gap-4">
+                            <img src="https://placehold.co/60x60" class="rounded-full" alt="Doctor photo">
+                            <div>
+                                <h3 class="font-semibold">Dr. Sarah Johnson</h3>
+                                <p class="text-gray-600">Cardiologist</p>
+                                <p class="text-sm text-gray-500">15 years experience</p>
+                                <a href="choose-date.html" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <div class="flex items-start gap-4">
+                            <img src="https://placehold.co/60x60" class="rounded-full" alt="Doctor photo">
+                            <div>
+                                <h3 class="font-semibold">Dr. Michael Smith</h3>
+                                <p class="text-gray-600">General Practitioner</p>
+                                <p class="text-sm text-gray-500">10 years experience</p>
+                                <a href="choose-date.html" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
