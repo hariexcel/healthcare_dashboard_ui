@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard Wireframe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="bg-gray-100 flex">
+    <!-- Pinnable Left Sidebar -->
+    <aside class="w-64 bg-white shadow-lg h-screen sticky top-0">
+        <div class="p-4">
+            <h1 class="text-xl font-bold mb-6">Healthcare Dashboard</h1>
+            
+            <!-- Patient Flows Section -->
+            <div class="mb-6">
+                <h2 class="text-sm font-semibold text-gray-600 mb-2">Patient Flows</h2>
+                <div class="space-y-2">
+                    <a href="../user-flows/patient-flow.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Main Dashboard</a>
+                    <a href="../user-flows/patient-appointments.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Appointments</a>
+                    <a href="../user-flows/patient-medical-records.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Medical Records</a>
+                </div>
+            </div>
+
+            <!-- Appointment Booking Section -->
+            <div class="mb-6">
+                <h2 class="text-sm font-semibold text-gray-600 mb-2">Appointment Booking</h2>
+                <div class="space-y-2">
+                    <a href="../user-flows/new-appointment.html" class="block px-4 py-2 hover:bg-gray-100 rounded">New Appointment</a>
+                    <a href="../user-flows/select-doctor.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Select Doctor</a>
+                    <a href="../user-flows/choose-date.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Select Date</a>
+                    <a href="../user-flows/confirm-appointment.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Confirm</a>
+                </div>
+            </div>
+
+            <!-- Additional Features Section -->
+            <div class="mb-6">
+                <h2 class="text-sm font-semibold text-gray-600 mb-2">Additional Features</h2>
+                <div class="space-y-2">
+                    <a href="../user-flows/patient-messages.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Messages</a>
+                    <a href="../user-flows/patient-prescriptions.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Prescriptions</a>
+                    <a href="../user-flows/upload-medical-record.html" class="block px-4 py-2 hover:bg-gray-100 rounded">Upload Records</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1">
+    <div class="p-6">
+        <!-- Patient Details Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Patient Details &amp; Reports</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Patient Information</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-600">Name: John Doe</p>
+                        <p class="text-gray-600">ID: PAT-2024-001</p>
+                        <p class="text-gray-600">Age: 35</p>
+                        <p class="text-gray-600">Contact: (555) 123-4567</p>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">Edit Details</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                    <h3 class="font-semibold mb-2">Generate Reports</h3>
+                    <div class="space-y-3">
+                        <a href="../reports/medical-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                            Medical History Report
+                        </a>
+                        <a href="../reports/prescription-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                            Prescription History
+                        </a>
+                        <a href="../reports/lab-results.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                            Lab Results Summary
+                        </a>
+                        <a href="../reports/appointment-history.html" class="block w-full text-left px-4 py-2 bg-gray-50 rounded hover:bg-gray-100">
+                            Appointment History
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Overview Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <!-- Health Metrics -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Health Overview</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Blood Pressure</span>
+                        <span class="font-semibold">120/80</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Heart Rate</span>
+                        <span class="font-semibold">72 bpm</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Weight</span>
+                        <span class="font-semibold">70 kg</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">BMI</span>
+                        <span class="font-semibold">22.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Next Appointment</h2>
+                <div class="space-y-2">
+                    <p class="font-medium">Dr. Sarah Johnson</p>
+                    <p class="text-gray-600">Cardiology Check-up</p>
+                    <p class="text-gray-600">December 5, 2024 - 10:00 AM</p>
+                    <a href="../user-flows/patient-appointments.html" class="text-blue-600 hover:underline text-sm">View all appointments</a>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+                <div class="space-y-3">
+                    <div class="text-sm">
+                        <p class="font-medium">New Prescription Added</p>
+                        <p class="text-gray-600">2 hours ago</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-medium">Lab Results Available</p>
+                        <p class="text-gray-600">Yesterday</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-medium">Appointment Completed</p>
+                        <p class="text-gray-600">3 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        // Blood Pressure Chart
+        const bpCtx = document.getElementById('bpChart').getContext('2d');
+        new Chart(bpCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                datasets: [{
+                    label: 'Systolic',
+                    data: [120, 118, 122, 119, 116, 120],
+                    borderColor: 'rgb(59, 130, 246)',
+                    tension: 0.1
+                }, {
+                    label: 'Diastolic',
+                    data: [80, 78, 82, 79, 76, 80],
+                    borderColor: 'rgb(147, 197, 253)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Blood Pressure Trends'
+                    }
+                }
+            }
+        });
+
+        // Blood Sugar Chart
+        const sugarCtx = document.getElementById('sugarChart').getContext('2d');
+        new Chart(sugarCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                datasets: [{
+                    label: 'Blood Sugar (mg/dL)',
+                    data: [95, 98, 92, 96, 94, 98],
+                    borderColor: 'rgb(34, 197, 94)',
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Blood Sugar Levels'
+                    }
+                }
+            }
+        });
+
+        // Weight Tracking Chart
+        const weightCtx = document.getElementById('weightChart').getContext('2d');
+        new Chart(weightCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                datasets: [{
+                    label: 'Weight (kg)',
+                    data: [72, 71, 70.5, 70, 70.2, 70],
+                    borderColor: 'rgb(236, 72, 153)',
+                    backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Weight Trends'
+                    }
+                }
+            }
+        });
+
+        // Heart Rate Monitoring Chart
+        const heartRateCtx = document.getElementById('heartRateChart').getContext('2d');
+        new Chart(heartRateCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+                datasets: [{
+                    label: 'Heart Rate (bpm)',
+                    data: [75, 72, 74, 71, 73, 72],
+                    borderColor: 'rgb(239, 68, 68)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Heart Rate Monitoring'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

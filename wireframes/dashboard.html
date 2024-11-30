@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport\" content="width=device-width, initial-scale=1.0">
     <title>Healthcare Dashboard Wireframe</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet\" href="../styles/main.css">
 </head>
 <body class="bg-gray-100 flex">
     <!-- Pinnable Left Sidebar -->
@@ -53,15 +52,11 @@
     <!-- Main Content -->
     <div class="flex-1">
         <div class="p-6">
-            <!-- Analytics Section -->
-            <div class="mb-8">
-                <h2 class="text-xl font-semibold mb-4">Health Analytics</h2>
-                <div id="bp-chart" class="mb-6"></div>
-            </div>
+
 
             <!-- Patient Details Section -->
             <div class="mb-8">
-                <h2 class="text-xl font-semibold mb-4">Patient Details & Reports</h2>
+                <h2 class="text-xl font-semibold mb-4">Patient Details &amp; Reports</h2>
                 <div class="grid grid-cols-2 gap-6">
                     <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
                         <h3 class="font-semibold mb-2">Patient Information</h3>
@@ -148,6 +143,21 @@
                     </div>
                 </div>
             </div>
+                    <!-- Health Analytics -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Health Analytics</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Blood Pressure Trends -->
+                <div class="w-full">
+                    <img src="../user-flows/BPT.png" alt="Blood Pressure Trends" class="w-full rounded-lg shadow-sm">
+                </div>
+                <!-- Heart Rate Monitor -->
+                <div class="w-full">
+                    <img src="../user-flows/hrm.png" alt="Heart Rate Monitor" class="w-full rounded-lg shadow-sm">
+                </div>
+            </div>
+        </div>
+
         </div>
     </div>
 
