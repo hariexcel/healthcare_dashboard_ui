@@ -1,6 +1,7 @@
 # Healthcare Dashboard UI
 
 A modern, responsive healthcare dashboard interface built with HTML, Tailwind CSS, and Chart.js.
+<img width="803" alt="Screenshot 2024-11-30 at 2 00 16 AM" src="https://github.com/user-attachments/assets/8ad5a611-34b8-4b20-8de2-d5b07528b276">
 
 ## Features
 
